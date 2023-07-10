@@ -29,6 +29,7 @@ def comprar():
                 print("Ingrese la cantidad valida")
         except:
             print("Excepcion en entradas")
+
     while True:
         for i in range(opcion):        
             try:
@@ -40,11 +41,11 @@ def comprar():
                         print("Asiento no disponible, seleccione otro ")
                     else:
                         if opcion >=1 and opcion <=20:
-                            contPlatinum =+1
+                            contPlatinum +1
                         elif opcion >=21 and opcion <=50:
-                            contGold =+1
+                            contGold +1
                         elif opcion >=51 and opcion <=100:
-                            contSilver =+1
+                            contSilver +1
                         try:
                             rut= int(input("Ingrese su rut sin puntos ni digito verificador"))
                             listaRut.slice(listaEntradas.index(opcion),rut)
@@ -69,14 +70,17 @@ def listado():
 def ganancias():
     print(f'''
     TIPO DE ENTRADA           CANTIDAD               TOTAL
-    PLATINUM: $120000         {contPlatinum}          {contPlatinum*120000}
-    GOLD:     $80000          {contGold}              {contGold*80000}
-    Silver:   $50000          {contSilver}            {contSilver*50000}
+    PLATINUM: $120000         {contPlatinum}                      {contPlatinum*120000}
+    GOLD:     $80000          {contGold}                      {contGold*80000}
+    Silver:   $50000          {contSilver}                      {contSilver*50000}
     ''')
 
 def mostrar():
     print(constEscenario)
     print(listaEntradas)
+
+def salida():
+    print("Felipe Aburto 10/07/2023")
 
 submenu= """
 1. Comprar entradas
@@ -93,13 +97,13 @@ def menu():
             if opcion == 1:
                 comprar()
             elif opcion == 2:
-                comprar()
+                mostrar()
             elif opcion == 3:
-                comprar()
+                listado()
             elif opcion == 4:
-                comprar()
+                ganancias()
             elif opcion == 5:
-                print("Felipe Aburto 10/07/2023")
+                salida()
                 break
         except:
             print("Excepcion en menu")
