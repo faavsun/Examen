@@ -80,7 +80,7 @@ def mostrar():
     print(listaEntradas)
 
 def salida():
-    print("Felipe Aburto 10/07/2023")
+    print("A salido del sistema Felipe Aburto 10/07/2023")
 
 submenu= """
 1. Comprar entradas
@@ -109,3 +109,4 @@ def menu():
             print("Excepcion en menu")
 
 menu()
+
